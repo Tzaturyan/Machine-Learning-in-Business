@@ -12,3 +12,13 @@
 3) display a comparison of the obtained models by the main classification metrics: pr/rec/auc/f_score (it is possible in the form of a table, where the rows are models and the columns are metrics)
 4) draw conclusions about which model coped with the task better than others
 5) (optional question) which metric (precision_recall_curve or roc_auc_curve) is more suitable in case of a strong imbalance of classes? (when there are many more objects of one of the classes than the other).
+# 4. Uplift-моделирование
+Download the data set of marketing campaigns from here https://www.kaggle.com/davinwijaya/customer-retention
+there, the conversion field is the target variable, and the offer is the communication. Rename the fields (conversion -> target, offer -> treatment) and bring the treatment field to a binary form (1 or 0, i.e. there was some offer or not) - the value No Offer means no communication, and all the others - the presence.
+to split the data set into non-training and test samples;
+discretion (freedom of choice of methods is allowed)
+to carry out uplift modeling in 3 ways: one model with a communication feature (S learner), a model with a target transformation (transformation of classes of clause 2.1) and an option with two independent models
+at the end to display a single comparison table of metrics uplift @10%, uplift@20% of these 3 models
+build an UpliftTreeClassifier model and try to describe the resulting tree in words;
+(optional) for the S learner model (a model with an additional sign of communication), build a dependence of the target (conversion - conversion field) on the uplift value: 1) make a forecast and get an uplift for the test sample 2) sort the test sample by uplift in descending order 3) split into deciles (pandas qcut to help you) 4) calculate the average conversion for each decile
+(optional) build an UpliftRandomForestClassifier model and try to describe the resulting tree in words
