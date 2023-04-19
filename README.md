@@ -22,3 +22,9 @@ at the end to display a single comparison table of metrics uplift @10%, uplift@2
 build an UpliftTreeClassifier model and try to describe the resulting tree in words;
 (optional) for the S learner model (a model with an additional sign of communication), build a dependence of the target (conversion - conversion field) on the uplift value: 1) make a forecast and get an uplift for the test sample 2) sort the test sample by uplift in descending order 3) split into deciles (pandas qcut to help you) 4) calculate the average conversion for each decile
 (optional) build an UpliftRandomForestClassifier model and try to describe the resulting tree in words
+# 5. The outflow problem: formulation options, possible solutions
+For our pipeline (Case1), experiment with different models: 1 - boosting, 2 - logistic regression (do not forget to add standardization to cont_transformer here - normalization of real features)
+Select the best model by metrics (by the way, which in your opinion is the most suitable DS metric here)
+deferred sample), make an assessment of economic efficiency with the same introductory data as in question 2 ($ 1 for attraction, $ 2 for each correctly classified (True Positive) retained). (hint) you need to calculate FP/TP/FN/TN for the selected optimal probability threshold and calculate revenue and expenses.
+(optional) To carry out the selection of hyperparameters of the best model based on the results of 2-3
+(optional) To evaluate the economic efficiency once again
