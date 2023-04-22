@@ -36,3 +36,12 @@ Next, divide your dataset into two sets: P (positives) and U (unlabeled). Moreov
 Apply random negative sampling to build a classifier under new conditions
 Compare the quality with the solution from point 4 (build a report - table of metrics)
 Experiment with the fraction of P in step 5 (how will the quality of the model change when the size of P decreases/increases)
+# 7. Interpretation of model forecasts SHAP
+Take any data set for binary classification (you can download one of the model ones from https://archive.ics.uci.edu/ml/datasets.php )
+make an overview analysis of the selected dataset
+, do feature engineering
+, train any classifier (whichever you like)
+, deal with SHAP and build the importance of features for:
+the entire test dataset (summary_plot - give an interpretation)
+for the top 10%
+for individual observations, output force_plot and try to interpret the result
