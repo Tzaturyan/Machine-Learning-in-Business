@@ -28,3 +28,11 @@ Select the best model by metrics (by the way, which in your opinion is the most 
 deferred sample), make an assessment of economic efficiency with the same introductory data as in question 2 ($ 1 for attraction, $ 2 for each correctly classified (True Positive) retained). (hint) you need to calculate FP/TP/FN/TN for the selected optimal probability threshold and calculate revenue and expenses.
 (optional) To carry out the selection of hyperparameters of the best model based on the results of 2-3
 (optional) To evaluate the economic efficiency once again
+# 6. Task look-alike
+Take any data set for binary classification (you can download one of the model ones from https://archive.ics.uci.edu/ml/datasets.php )
+Make feature engineering
+Train any classifier (whichever you like)
+Next, divide your dataset into two sets: P (positives) and U (unlabeled). Moreover, it is necessary to take not all positive (class 1) examples, but only a part
+Apply random negative sampling to build a classifier under new conditions
+Compare the quality with the solution from point 4 (build a report - table of metrics)
+Experiment with the fraction of P in step 5 (how will the quality of the model change when the size of P decreases/increases)
