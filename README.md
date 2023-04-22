@@ -45,3 +45,4 @@ make an overview analysis of the selected dataset
 the entire test dataset (summary_plot - give an interpretation)
 for the top 10%
 for individual observations, output force_plot and try to interpret the result
+# 8. We check the operation of the model in practice: A/B testing
